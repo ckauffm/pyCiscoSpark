@@ -7,7 +7,7 @@ accesstoken="Bearer "+bearertoken
 #accesstoken="Bearer "+str(sys.argv[1])
 roomname="Developer Project Room"
 
-
+###
 print (accesstoken)
 
 name = pyCiscoSpark.get_persondetails(accesstoken,"me")['displayName']
