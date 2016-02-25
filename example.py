@@ -1,8 +1,11 @@
 import pyCiscoSpark
 import sys
 
-accesstoken="Bearer "+str(sys.argv[1])
-roomname="Google Bot Example"
+bearertoken = "MWY2Yjg5YmEtN2RkYy00MTg5LTg4OTQtMDMzMWUyMTJiZGI4ZWQ3ZGIzMmEtN2Jk"
+accesstoken="Bearer "+bearertoken
+
+#accesstoken="Bearer "+str(sys.argv[1])
+roomname="Example.py"
 
 
 print (accesstoken)
@@ -16,7 +19,8 @@ print ("----------------------------------------------------")
 
 for room in room_dict['items']:
     print (room['title'])
-    if (room['title']==roomname):roomid = room['id']
+    if (room['title']==roomname):
+        roomid = room['id']
 print ("")
 
 mess_dict = pyCiscoSpark.get_messages(accesstoken,roomid)
